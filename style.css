@@ -1,0 +1,107 @@
+*,
+*::before,*::after {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+.hidden{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.new-game-btn {
+    padding: 15px 20px;
+    margin: 0;
+    color: brown;
+}
+
+.bgDark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+}
+
+.grid {
+    height: 100%;
+    display: grid;
+    margin: 0;
+    padding: 0;
+    grid-template-columns:repeat(4, 1fr) ;
+}
+
+.card {
+    position: relative;
+    transition: visibility 0.5s ease, opacity 0.5s ease;
+}
+
+.front {
+    transform: perspective(600px) rotateY(0deg);
+    background: url('i.webp')no-repeat center/contain;
+}
+
+.back{
+    transform:  perspective(600px) rotateY(180deg);
+    
+}
+
+.card.active> .front{
+    transform: perspective(600px) rotateY(-180deg);
+}
+.card.active > .back{
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.front,
+.back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transition: transform .6s linear;
+}
+
+.kresti {
+    background: url('krest.png')no-repeat center/contain;
+}
+
+.peaks {
+    background: url('peaks.jpg')no-repeat center/contain;
+}
+
+.buby {
+    background: url('buby.jpg')no-repeat center/contain;
+}
+
+.chervi {
+    background: url('cherv.jpg')no-repeat center/contain;
+}   
+
+.joker {
+    background: url('jpker.webp')no-repeat center/contain;
+}
+
+.money {
+    background: url('money.jpg')no-repeat center/contain;
+}
+
+.knight {
+    background: url('knight.jpg')no-repeat center/contain;
+}
+
+.rogue {
+    background: url('rogue.jpg')no-repeat center/contain;
+}
